@@ -1,0 +1,62 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESULTADO DE PREDICCIÓN</title>
+    <style>
+        body {
+            background: #0057B8;
+            color: #FFD700;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.5em;
+            background: #FFD700;
+            padding: 10px;
+            border-radius: 10px;
+            color: #0057B8;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        img {
+            margin-top: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #FFD700;
+            color: #0057B8;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        a:hover {
+            background: #E6C300;
+        }
+    </style>
+</head>
+<body>
+    <h1>PREDICCIÓN DE RESULTADO</h1>
+    <p>{{ result }}</p>
+    <img src="data:image/jpeg;base64,{{ img_data }}" alt="Processed Image">
+    <br><br>
+    <a href="/">VOLVER</a>
+</body>
+</html>

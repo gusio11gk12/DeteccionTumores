@@ -1,0 +1,8 @@
+Flask==2.2.3
+Werkzeug==2.2.3
+opencv-python==4.7.0.68
+Pillow==9.4.0
+tensorflow==2.19.0
+imutils==0.5.4
+numpy==1.26.0
+gunicorn==20.1.0

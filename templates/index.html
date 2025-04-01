@@ -1,0 +1,92 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector De Tumores Cecebrales</title>
+    <style>
+        body {
+            background: #0057B8;
+            color: #FFD700;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        form {
+            background: #FFD700;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            color: #0057B8;
+        }
+        label, input, button {
+            font-size: 1.2em;
+        }
+        input[type="file"] {
+            background: #fff;
+            color: #000;
+        }
+        button {
+            background: #0057B8;
+            color: #FFD700;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #003F7D;
+        }
+        #preview {
+            margin-top: 20px;
+            max-width: 300px;
+            display: none;
+            border-radius: 10px;
+        }
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Detector De Tumores Cerebrales</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="file">SUBIR IMAGEN MRI:</label>
+        <input type="file" name="file" accept=".jpg, .jpeg, .png" required onchange="previewImage(event)">
+        <br>
+        <img id="preview" alt="Vista previa de la imagen">
+        <br>
+        <button type="submit">Cargar Imagen</button>
+    </form>
+
+    <script>
+        function previewImage(event) {
+            const preview = document.getElementById('preview');
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function() {
+                preview.src = reader.result;
+                preview.style.display = 'block';
+            }
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>
+</html>
