@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detector De Tumores Cecebrales</title>
+    <title>Detecta Tumores Cecebrales</title>
     <style>
         body {
             background: #0057B8;
@@ -56,22 +56,18 @@
             display: none;
             border-radius: 10px;
         }
-        footer {
-            position: absolute;
-            bottom: 20px;
-            font-size: 0.9em;
-        }
+
     </style>
 </head>
 <body>
-    <h1>Detector De Tumores Cerebrales</h1>
+    <h1>DetectaTumores Cerebrales</h1>
     <form action="/upload" method="post" enctype="multipart/form-data">
-        <label for="file">SUBIR IMAGEN MRI:</label>
+        <label for="file">CARGAR IMAGEN:</label>
         <input type="file" name="file" accept=".jpg, .jpeg, .png" required onchange="previewImage(event)">
         <br>
         <img id="preview" alt="Vista previa de la imagen">
         <br>
-        <button type="submit">Cargar Imagen</button>
+        <button type="submit">PROCESAR IMAGEN</button>
     </form>
 
     <script>
